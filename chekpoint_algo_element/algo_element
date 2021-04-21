@@ -1,0 +1,40 @@
+/* ALGORITHM length of the sentence */
+ALGORITHM length of the sentence, number of words and number of vowels
+VAR
+
+CH:string;
+i ,j ,k ,word ,vowels : INTEGER := 0;
+
+BEGIN
+ REPEAT
+     	Write ("Give a string:")
+     	Read (CH)
+ UNTIL ( Length (CH) ≠ 0)
+ 	Write( CH);
+ While (string [i]! = END) DO
+ 	i :=i+1;
+ 	len:=i;
+ END_WHILE
+ 	
+ FOR j FROM 1 TO Length (CH) DO
+
+	IF (CH[j]='' && CH[j-1]!=' ') THEN
+ 		word:=word+1;
+	END_IF
+
+ END_FOR
+	
+ FOR k FROM 1 TO Length (CH) DO
+
+	IF (CH[k]='A' || CH[k]='E' || CH[k]='I' || CH[k]='O' || CH[k]='U' || CH[k]='a' || CH[k]='e' || CH[k]='i' || CH[k]='o' || CH[k]='u') THEN
+		vowels:=vowels+1;	
+	END_IF
+ END_FOR
+
+	Write(len);
+	Write (word);
+	Write (vowels);
+
+END
+
+
